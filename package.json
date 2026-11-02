@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-pumpgtm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "n8n node for PumpGTM: find buyers, run LinkedIn, email and X outreach, and answer replies from your AI.",
   "license": "MIT",
   "homepage": "https://pumpgtm.com/docs/api",
@@ -14,7 +14,7 @@
   ],
   "author": {
     "name": "Giga Next Inc.",
-    "email": "hello@pumpgtm.com"
+    "url": "https://pumpgtm.com"
   },
   "repository": {
     "type": "git",
