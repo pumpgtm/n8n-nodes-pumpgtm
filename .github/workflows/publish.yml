@@ -1,0 +1,28 @@
+# Publishes to npm with a provenance statement on every version tag (for example 0.1.0).
+# Auth uses npm trusted publishing (OIDC). NPM_TOKEN is only a fallback when set.
+name: Publish
+
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - run: npm publish --provenance --access public
+        env:
+          RELEASE_MODE: 'true'
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

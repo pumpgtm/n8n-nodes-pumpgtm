@@ -1,0 +1,21 @@
+{
+	"node": "n8n-nodes-pumpgtm",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Sales",
+		"Marketing & Content"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://pumpgtm.com/docs/api"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://pumpgtm.com/docs/api"
+			}
+		]
+	}
+}
